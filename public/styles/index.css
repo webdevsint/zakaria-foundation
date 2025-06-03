@@ -1,617 +1,622 @@
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Lato", sans-serif;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-.container {
-  width: 100%;
-}
-
-h3 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.leading-relaxed {
-  line-height: 1.75;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.parallax-section {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 600px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: relative;
-  z-index: 10;
-}
-
-.parallax-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.parallax-content {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.impact-text {
-  text-align: justify;
-}
-
-.glassy-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  margin: 1rem;
-  transition: transform 0.3s ease-in-out;
-}
-
-.glassy-card:hover {
-  transform: translateY(-5px);
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#quran-studies-section {
-  background-image: url("https://nooracademy.com/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-15-at-6.23.32-PM-3.jpeg");
-}
-#education-section {
-  background-image: url("https://tds-images.thedailystar.net/sites/default/files/styles/very_big_1/public/feature/images/rethink-teaching.jpg");
-}
-#medical-assistance-section {
-  background-image: url("https://www.united.com.bd/wp-content/uploads/2022/01/IMG_6073.jpeg");
-}
-#self-reliance-section {
-  background-image: url("https://blog.credgenics.com/wp-content/uploads/2023/08/Optimized-young-indian-banker-agronomist-showing-some-detail-farmer-smartphone-min.jpg");
-}
-#zakat-section {
-  background-image: url("https://muslimaid-2022.storage.googleapis.com/upload/img_cache/file-29294-f907ea5a78263a7183abeef9f62c2b2f.jpg");
-}
-#religious-institutions-section {
-  background-image: url("https://www.commercialinteriordesign.com/cloud/2023/01/16/dandaji-mosque-atelier-masomi_6_1-1536x1060.jpg");
-}
-#food-distribution-section {
-  background-image: url("https://southasiajournal.net/wp-content/uploads/2022/08/RohingyaQAhero.jpg");
-}
-#housing-assistance-section {
-  background-image: url("https://gca.org/wp-content/uploads/2022/10/DSC3464-scaled.jpg");
-}
-#natural-disaster-section {
-  background-image: url("https://gca.org/wp-content/uploads/2022/10/iStock-837800990.jpg");
-}
-#youth-activities-section {
-  background-image: url("https://images.sidearmdev.com/convert?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fgolancers.ca%2fimages%2f2018%2f6%2f12%2fkidsplaying.jpg&type=webp");
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media (max-width: 700px) {
-  .hero {
-    padding: 3rem;
-  }
-}
-
-.hero-header {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-header img {
-  width: 70px;
-}
-
-.hero-header h1 {
-  font-size: 25px;
-}
-
-@media (max-width: 410px) {
-  .hero-header h1 {
-    font-size: 21px;
-  }
-
-  .hero-header img {
-    width: 60px;
-  }
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  font-family: "Cal Sans", sans-serif;
-  text-align: justify;
-}
-
-.hero-text p {
-  font-weight: 300;
-  font-size: 20px;
-  color: #4b5563;
-}
-
-hr {
-  border-width: 1px 0px;
-  border-right-style: initial;
-  border-left-style: initial;
-  border-right-color: initial;
-  border-left-color: initial;
-  border-image: initial;
-  height: 0px;
-  border-top-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.1);
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-.hero-text a {
-  padding: 0.7rem 1.5rem;
-  background: #f7f7f7;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  transition: 0.1s;
-}
-
-.hero-text i {
-  margin-right: 1rem;
-}
-
-.hero-text a:hover {
-  background: #00a2ff;
-  color: white;
-}
-
-.copyright {
-  padding: 1rem;
-  background: rgb(22, 22, 22);
-  color: white;
-}
-
-.copyright a {
-  line-height: 1;
-  color: white;
-  text-decoration: none;
-}
-
-.copyright a:hover {
-  text-decoration: underline;
-}
-
-#donate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% - 6rem);
-  padding: 3rem;
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  #donate {
-    width: calc(100% - 2rem);
-    padding: 2rem 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  #donate {
-    width: 100%;
-    padding: 0;
-  }
-
-  .donation-container {
-    width: 100%;
-  }
-}
-
-.donation-container {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 900px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInSlideUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #374151;
-  margin-bottom: 20px;
-}
-
-.section-description {
-  font-size: 18px;
-  color: #4b5563;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-.donation-options-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-}
-
-.donation-card {
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.donation-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.bkash-card {
-  background: linear-gradient(
-    135deg,
-    #fff0f5,
-    #ffe4e6
-  );
-  border: 1px solid #ffc0cb;
-}
-
-.bank-card {
-  background: linear-gradient(
-    135deg,
-    #e0f2fe,
-    #e3f2fd
-  );
-  border: 1px solid #90caf9;
-}
-
-.card-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.bkash-card .card-title {
-  color: #d82c6b;
-}
-
-.bank-card .card-title {
-  color: #1e88e5;
-}
-
-.card-title i {
-  margin-right: 10px;
-}
-
-.card-description {
-  color: #4b5563;
-  margin-bottom: 15px;
-  font-size: 0.95em;
-}
-
-.detail-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  font-size: 0.9em;
-  word-break: break-all;
-}
-
-.detail-label {
-  font-weight: 600;
-  color: #374151;
-}
-
-.detail-value {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
-  color: #1f2937;
-  text-align: left;
-  width: 100%;
-  margin-left: 0;
-}
-
-.copy-button-container {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.copy-button-container .detail-value {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.copy-button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.85em;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  white-space: nowrap;
-  width: auto;
-  margin-left: 0;
-}
-
-.bkash-card .copy-button {
-  background-color: #d82c6b;
-  color: #ffffff;
-}
-
-.bkash-card .copy-button:hover {
-  background-color: #c0265c;
-  transform: translateY(-1px);
-}
-
-.bank-card .copy-button {
-  background-color: #1e88e5;
-  color: #ffffff;
-}
-
-.bank-card .copy-button:hover {
-  background-color: #1565c0;
-  transform: translateY(-1px);
-}
-
-.note-text {
-  font-size: 0.85em;
-  color: #6b7280;
-  margin-top: 15px;
-}
-
-@media (min-width: 768px) {
-  .donation-options-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 3rem 0;
-  background-color: #f8fafd;
-}
-
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 2rem 0;
-  }
-}
-
-.contact-container {
-  background-color: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 50px;
-  max-width: 950px;
-  width: 90%;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInSlideUp 0.8s ease-out forwards;
-}
-
-@media (max-width: 768px) {
-  .contact-container {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-container {
-    padding: 20px;
-    width: 95%;
-  }
-}
-
-.contact-details-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-.contact-item {
-  padding: 0;
-  box-shadow: none;
-  border-radius: 0;
-  text-align: left;
-  transition: none;
-  border: none;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-item:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.contact-title {
-  font-size: 26px;
-  color: #34495e;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.contact-title i {
-  font-size: 1.2em;
-  margin-right: 12px;
-  color: #3498db;
-}
-
-.contact-description {
-  color: #7f8c8d;
-  margin-bottom: 20px;
-  font-size: 1em;
-}
-
-.contact-detail-row {
-  background-color: #ffffff;
-  border: 1px solid #e0e6ed;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.contact-detail-row .detail-label {
-  font-weight: 700;
-  color: #34495e;
-  margin-bottom: 5px;
-}
-
-.contact-detail-row .detail-value {
-  color: #2c3e50;
-  font-size: 1.05em;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
-  text-align: left;
-  width: 100%;
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-width: 0;
-  word-break: break-all;
-}
-
-.contact-detail-row .copy-button-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.contact-detail-row .copy-button-container .detail-value {
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-width: 0;
-  margin-right: 10px;
-}
-
-.contact-detail-row .copy-button {
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 0.9em;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  background-color: #3498db;
-  color: #ffffff;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: none;
-  flex-shrink: 0;
-  white-space: nowrap;
-  width: auto;
-}
-
-.contact-detail-row .copy-button:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
-}
+ @import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", sans-serif;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            line-height: 1.6;
+            background-color: #f3f4f6; /* Ensure a consistent background */
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+        }
+
+        .leading-relaxed {
+            line-height: 1.75;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 600px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            z-index: 1; /* Changed from 10 to 1 as it was causing issues with other elements */
+        }
+
+        .parallax-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .impact-text {
+            text-align: justify;
+        }
+
+        .glassy-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            backdrop-filter: blur(1rem);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .glassy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #quran-studies-section {
+            background-image: url("https://nooracademy.com/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-15-at-6.23.32-PM-3.jpeg");
+        }
+        #education-section {
+            background-image: url("https://tds-images.thedailystar.net/sites/default/files/styles/very_big_1/public/feature/images/rethink-teaching.jpg");
+        }
+        #medical-assistance-section {
+            background-image: url("https://www.united.com.bd/wp-content/uploads/2022/01/IMG_6073.jpeg");
+        }
+        #self-reliance-section {
+            background-image: url("https://blog.credgenics.com/wp-content/uploads/2023/08/Optimized-young-indian-banker-agronomist-showing-some-detail-farmer-smartphone-min.jpg");
+        }
+        #zakat-section {
+            background-image: url("https://muslimaid-2022.storage.googleapis.com/upload/img_cache/file-29294-f907ea5a78263a7183abeef9f62c2b2f.jpg");
+        }
+        #religious-institutions-section {
+            background-image: url("https://www.commercialinteriordesign.com/cloud/2023/01/16/dandaji-mosque-atelier-masomi_6_1-1536x1060.jpg");
+        }
+        #food-distribution-section {
+            background-image: url("https://southasiajournal.net/wp-content/uploads/2022/08/RohingyaQAhero.jpg");
+        }
+        #housing-assistance-section {
+            background-image: url("https://gca.org/wp-content/uploads/2022/10/DSC3464-scaled.jpg");
+        }
+        #natural-disaster-section {
+            background-image: url("https://gca.org/wp-content/uploads/2022/10/iStock-837800990.jpg");
+        }
+        #youth-activities-section {
+            background-image: url("https://images.sidearmdev.com/convert?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fgolancers.ca%2fimages%2f2018%2f6%2f12%2fkidsplaying.jpg&type=webp");
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 20px; /* Add padding for smaller screens */
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 3rem;
+            }
+        }
+
+        .hero-header {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-header img {
+            width: 70px;
+        }
+
+        .hero-header h1 {
+            font-size: 25px;
+        }
+
+        @media (max-width: 410px) {
+            .hero-header h1 {
+                font-size: 21px;
+            }
+
+            .hero-header img {
+                width: 60px;
+            }
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            font-family: "Cal Sans", sans-serif;
+            text-align: justify;
+        }
+
+        .hero-text p {
+            font-weight: 300;
+            font-size: 20px;
+            color: #4b5563;
+        }
+
+        hr {
+            border-width: 1px 0px;
+            border-right-style: initial;
+            border-left-style: initial;
+            border-right-color: initial;
+            border-left-color: initial;
+            border-image: initial;
+            height: 0px;
+            border-top-style: solid;
+            border-top-color: rgba(0, 0, 0, 0.1);
+            border-bottom-style: solid;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-text a {
+            padding: 0.7rem 1.5rem;
+            background: #f7f7f7;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            transition: 0.1s;
+        }
+
+        .hero-text i {
+            margin-right: 1rem;
+        }
+
+        .hero-text a:hover {
+            background: #00a2ff;
+            color: white;
+        }
+
+        .copyright {
+            padding: 1rem;
+            background: rgb(22, 22, 22);
+            color: white;
+            text-align: center; /* Center copyright text */
+        }
+
+        .copyright a {
+            line-height: 1;
+            color: white;
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        #donate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 6rem);
+            padding: 3rem;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            #donate {
+                width: calc(100% - 2rem);
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #donate {
+                width: 100%;
+                padding: 0;
+            }
+
+            .donation-container {
+                width: 100%;
+            }
+        }
+
+        .donation-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: #4b5563;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .donation-options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .donation-card {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .bkash-card {
+            background: linear-gradient(
+                135deg,
+                #fff0f5,
+                #ffe4e6
+            );
+            border: 1px solid #ffc0cb;
+        }
+
+        .bank-card {
+            background: linear-gradient(
+                135deg,
+                #e0f2fe,
+                #e3f2fd
+            );
+            border: 1px solid #90caf9;
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bkash-card .card-title {
+            color: #d82c6b;
+        }
+
+        .bank-card .card-title {
+            color: #1e88e5;
+        }
+
+        .card-title i {
+            margin-right: 10px;
+        }
+
+        .card-description {
+            color: #4b5563;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .detail-row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            word-break: break-all;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .detail-value {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+                monospace;
+            color: #1f2937;
+            text-align: left;
+            width: 100%;
+            margin-left: 0;
+            padding-top: 5px;
+        }
+
+        .copy-button-container {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .copy-button-container .detail-value {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .copy-button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+            width: auto;
+            margin-left: 0;
+        }
+
+        .bkash-card .copy-button {
+            background-color: #d82c6b;
+            color: #ffffff;
+        }
+
+        .bkash-card .copy-button:hover {
+            background-color: #c0265c;
+            transform: translateY(-1px);
+        }
+
+        .bank-card .copy-button {
+            background-color: #1e88e5;
+            color: #ffffff;
+        }
+
+        .bank-card .copy-button:hover {
+            background-color: #1565c0;
+            transform: translateY(-1px);
+        }
+
+        .note-text {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .donation-options-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 3rem 0;
+            background-color: #f8fafd;
+        }
+
+        @media (max-width: 600px) {
+            .contact-section {
+                padding: 2rem 0;
+            }
+        }
+
+        .contact-container {
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 50px;
+            max-width: 950px;
+            width: 90%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                padding: 20px;
+                width: 95%;
+            }
+        }
+
+        .contact-details-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .contact-item {
+            padding: 0;
+            box-shadow: none;
+            border-radius: 0;
+            text-align: left;
+            transition: none;
+            border: none;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .contact-title {
+            font-size: 26px;
+            color: #34495e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-title i {
+            font-size: 1.2em;
+            margin-right: 12px;
+            color: #3498db;
+        }
+
+        .contact-description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .contact-detail-row {
+            background-color: #ffffff;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contact-detail-row .detail-label {
+            font-weight: 700;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail-row .detail-value {
+            color: #2c3e50;
+            font-size: 1.05em;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+                monospace;
+            text-align: left;
+            width: 100%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            min-width: 0;
+            word-break: break-all;
+        }
+
+        .contact-detail-row .copy-button-container {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .contact-detail-row .copy-button-container .detail-value {
+            flex-grow: 1;
+            flex-shrink: 1;
+            min-width: 0;
+            margin-right: 10px;
+        }
+
+        .contact-detail-row .copy-button {
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #ffffff;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: none;
+            flex-shrink: 0;
+            white-space: nowrap;
+            width: auto;
+        }
+
+        .contact-detail-row .copy-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
